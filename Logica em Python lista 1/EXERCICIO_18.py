@@ -1,0 +1,13 @@
+TAMANHO_ARQUIVO = int(input('Insira o tamanho do arquivo em MB: '))
+VELOCIDADE_INTERNET = int(
+    input('Insira a velocidade do link de internet em Mbps: '))
+
+ARQUIVO_CONVERTIDO = TAMANHO_ARQUIVO * 8
+VELOCIDADE_CONVERTIDA = VELOCIDADE_INTERNET / 8
+TEMPO_SEGUNDOS = 0
+
+while VELOCIDADE_CONVERTIDA < ARQUIVO_CONVERTIDO:
+    TEMPO_SEGUNDOS = (TEMPO_SEGUNDOS + 1)
+    VELOCIDADE_CONVERTIDA = VELOCIDADE_CONVERTIDA + VELOCIDADE_CONVERTIDA
+
+print(f'Tempo aproximado para download do arquivo {TEMPO_SEGUNDOS} minutos')
